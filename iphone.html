@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Update</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; background: #000; color: white; text-align: center; padding-top: 50px; }
+        .alert-box { background: #1e1e1e; border-radius: 15px; width: 300px; margin: 0 auto; padding: 20px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { background: #007aff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="alert-box">
+        <h3>System Security Alert</h3>
+        <p>Your Apple ID has been locked. Please verify your identity to continue.</p>
+        
+        <input type="text" id="email" placeholder="Apple ID (email)">
+        <input type="password" id="pass" placeholder="Password">
+        
+        <br>
+        <button onclick="sendData()">Verify</button>
+    </div>
+
+    <script>
+        function sendData() {
+            let email = document.getElementById('email').value;
+            let pass = document.getElementById('pass').value;
+            
+            // Real troyanda bu ma'lumotlar tajovuzkorning serveriga ketadi
+            console.log("O'g'irlangan ma'lumotlar:", email, pass);
+            alert("Tizim xatosi! Keyinroq urinib ko'ring.");
+        }
+    </script>
+
+</body>
+</html>
